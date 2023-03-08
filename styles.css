@@ -1,0 +1,87 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Outfit:wght@400;700&display=swap");
+
+/*The designs were created to the following widths:
+
+- Mobile: 375px
+- Desktop: 1440px
+*/
+:root {
+  /*Colors*/
+  --col-white: hsl(0, 0%, 100%);
+  --col-light-gray: hsl(212, 45%, 89%);
+  --col-grayish-blue: hsl(220, 15%, 55%);
+  --col-dark-blue: hsl(218, 44%, 22%);
+  /*Fonts*/
+  --fw-low: 400;
+  --fw-high: 700;
+  --fs-general: 15px;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: Outfit;
+  font-size: var(--fs-general);
+}
+
+body {
+  background-color: var(--col-light-gray);
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.card {
+  width: 80%;
+  height: 60vh;
+  max-width: 325px;
+  min-width: 250px;
+  max-height: 500px;
+  background-color: var(--col-white);
+  border-radius: 1rem;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.img-container {
+  height: 60%;
+  width: 100%;
+  background-image: url("./images/image-qr-code.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-clip: border-box;
+  border-radius: 1rem;
+}
+
+.text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+  gap: 1rem;
+  padding: 1rem;
+}
+
+.text-bold {
+  font-weight: var(--fw-high);
+  color: var(--col-dark-blue);
+  text-align: center;
+  font-size: 1.3rem;
+}
+.text-soft {
+  font-weight: var(--fw-low);
+  text-align: center;
+  color: var(--col-grayish-blue);
+}
+
+@media only screen and (min-width: 1440px) {
+  .text-bold {
+    font-size: 1.4rem;
+  }
+}
